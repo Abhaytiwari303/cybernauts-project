@@ -365,7 +365,7 @@ This project is licensed under the MIT License.
 
 ## 👥 Authors
 
-- Name - [Abhay Tiwarihttps://github.com/Abhaytiwari30](https://github.com/Abhaytiwari30)
+- Name - [https://github.com/Abhaytiwari30/](https://github.com/Abhaytiwari303)
 
 ## 🙏 Acknowledgments
 
