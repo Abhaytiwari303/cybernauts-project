@@ -1,5 +1,8 @@
 # Cybernauts Interactive User Relationship & Hobby Network
-🚀 Live Demo - Frontend | 🔗 Backend API
+
+🚀 **[Live Demo - Frontend](https://cybernauts-frontend-ckhd.onrender.com)** | 🔗 **[Backend API](https://cybernauts-backend-wlag.onrender.com)**
+
+---
 
 ## 📋 Project Description
 
