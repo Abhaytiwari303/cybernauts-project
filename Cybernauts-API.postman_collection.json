@@ -1,0 +1,196 @@
+{
+  "info": {
+    "name": "Cybernauts API",
+    "description": "Complete API collection for the Cybernauts social network project with user management, friendships, and graph visualization endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"Abhay\",\n  \"age\": 22,\n  \"hobbies\": [\"coding\", \"music\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users",
+              "host": ["{{base_url}}"],
+              "path": ["users"]
+            },
+            "description": "Create a new user with username, age, and hobbies. Returns the created user with ID, friends array, and initial popularity score of 0."
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users",
+              "host": ["{{base_url}}"],
+              "path": ["users"]
+            },
+            "description": "Fetch all users with their complete details including username, age, hobbies, friends, and popularity scores."
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": 23,\n  \"hobbies\": [\"coding\", \"music\", \"reading\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users/:id",
+              "host": ["{{base_url}}"],
+              "path": ["users", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "64f9e0b1",
+                  "description": "User ID"
+                }
+              ]
+            },
+            "description": "Update user details such as age or hobbies. Username cannot be changed after creation."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users/:id",
+              "host": ["{{base_url}}"],
+              "path": ["users", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "64f9e0b1",
+                  "description": "User ID"
+                }
+              ]
+            },
+            "description": "Delete a user if they have no friends. Returns 409 Conflict if user still has active friendships."
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints for managing user accounts including creation, retrieval, updates, and deletion."
+    },
+    {
+      "name": "Friendships",
+      "item": [
+        {
+          "name": "Link Friends",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"friendId\": \"64f9e0b2\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users/:id/link",
+              "host": ["{{base_url}}"],
+              "path": ["users", ":id", "link"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "64f9e0b1",
+                  "description": "User ID"
+                }
+              ]
+            },
+            "description": "Create a mutual friendship between two users. Automatically updates popularity scores for both users based on shared hobbies."
+          },
+          "response": []
+        },
+        {
+          "name": "Unlink Friend",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"friendId\": \"64f9e0b2\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/users/:id/unlink",
+              "host": ["{{base_url}}"],
+              "path": ["users", ":id", "unlink"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "64f9e0b1",
+                  "description": "User ID"
+                }
+              ]
+            },
+            "description": "Remove a friendship between two users. Updates popularity scores accordingly."
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints for managing friendships between users, including linking and unlinking operations."
+    },
+    {
+      "name": "Graph Data",
+      "item": [
+        {
+          "name": "Fetch Graph Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users/graph",
+              "host": ["{{base_url}}"],
+              "path": ["users", "graph"]
+            },
+            "description": "Return graph data for frontend visualization. Includes nodes (users with positions) and edges (friendships) formatted for React Flow."
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoint for fetching graph visualization data with nodes and edges."
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000/api",
+      "type": "string"
+    }
+  ]
+}
