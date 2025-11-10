@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { AppProvider } from "./context/AppContext";
+import HomePage from "./pages/HomePage";
+import { Toaster } from "react-hot-toast";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+       <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 2500,
+          style: { background: "#1f2937", color: "#fff" },
+          success: { iconTheme: { primary: "#22c55e", secondary: "#fff" } },
+          error: { iconTheme: { primary: "#ef4444", secondary: "#fff" } },
+        }}
+      />
+      <HomePage />
+    </AppProvider>
   );
-}
+};
 
 export default App;
