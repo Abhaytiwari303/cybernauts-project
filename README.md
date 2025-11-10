@@ -10,6 +10,14 @@ A full-stack application for managing users, their friendships, and hobbies with
 
 The application features an interactive network graph where users are represented as nodes (sized and colored by popularity), friendships as edges, and hobbies as draggable elements that can be assigned to users in real-time.
 
+---
+## 🔗 Live Demo
+
+- **Frontend:** https://cybernauts-frontend-ckhd.onrender.com
+- **Backend API:** https://cybernauts-backend-wlag.onrender.com
+
+---
+
 ## 🚀 Tech Stack
 
 ### Backend
@@ -345,24 +353,6 @@ cybernauts-network/
 ├── Cybernauts.postman_collection.json
 └── README.md
 ```
-
-## 🔗 Live Demo
-
-- **Frontend:** https://cybernauts-frontend-ckhd.onrender.com
-- **Backend API:** https://cybernauts-backend-wlag.onrender.com
-
-## 📹 Video Demonstration
-
-[Link to screen recording demonstration] - Coming soon
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
 ## 📄 License
 
 This project is licensed under the MIT License.
