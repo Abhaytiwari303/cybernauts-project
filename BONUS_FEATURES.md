@@ -212,33 +212,3 @@ toast.error('Failed to delete user. Please unlink friends first.');
 * Clear feedback
 * Non-intrusive and professional UI
 
----
-
-### 8. Graph Interaction Enhancements
-
-**Implemented Features:**
-
-* Drag-to-connect friendships
-* Right-click context menu for quick actions
-* Double-click to edit user
-* Zoom controls and mini-map
-
-**Code Example:**
-
-```typescript
-const onConnect = (params) => linkUsers(params.source, params.target);
-
-const onNodeContextMenu = (event, node) => {
-  event.preventDefault();
-  showContextMenu({ x: event.clientX, y: event.clientY, actions: [
-    { label: 'Edit User', onClick: () => editUser(node.id) },
-    { label: 'Unlink All Friends', onClick: () => unlinkAll(node.id) },
-    { label: 'Delete User', onClick: () => deleteUser(node.id) },
-  ]});
-};
-```
-
-**Benefits:**
-
-* Intuitive and fast workflow
-* Enhanced professional feel
