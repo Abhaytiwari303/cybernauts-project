@@ -344,8 +344,8 @@ cybernauts-network/
 
 ## 🔗 Live Demo
 
-- **Frontend:** `https://your-frontend.onrender.com`
-- **Backend API:** `https://your-backend.onrender.com`
+- **Frontend:** `https://cybernauts-frontend-ckhd.onrender.com`
+- **Backend API:** https://cybernauts-backend-wlag.onrender.com
 
 ## 📹 Video Demonstration
 
