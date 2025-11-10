@@ -365,7 +365,7 @@ This project is licensed under the MIT License.
 
 ## 👥 Authors
 
-- Your Name - [[Your GitHub Profile]](https://github.com/Abhaytiwari30)
+- Name - [Abhay Tiwarihttps://github.com/Abhaytiwari30](https://github.com/Abhaytiwari30)
 
 ## 🙏 Acknowledgments
 
